@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf9f4">
+  <meta name="description" content="Яку роль ти граєш у конфлікті? 18 запитань для самоспостереження, три ролі трикутника Карпмана й маленький крок до змін. Олена Мовчан.">
+  <meta property="og:title" content="Визнач свою роль у конфлікті · Олена Мовчан">
+  <meta property="og:description" content="Жертва, Рятівник чи Переслідувач? Подивися на знайомі сценарії по-новому. Без оцінок і ярликів.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="uk_UA">
+  <title>Визнач свою роль · Олена Мовчан</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23654062'/%3E%3Cpath d='M32 13L48 43H16Z' stroke='%23f5e9dc' stroke-width='2' fill='none'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23f5e9dc'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Перейти до змісту</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <button class="brand" id="brand-home" type="button" aria-label="Олена Мовчан — на головну">
+        <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18.5" stroke="#a88e9f"/><path d="M20 8v24M8 20h24M11.5 11.5l17 17m0-17-17 17" stroke="#7e5b76" stroke-width="1.1"/><circle cx="20" cy="20" r="6.5" fill="#fbf9f4" stroke="#7e5b76"/></svg>
+        <span><span class="brand-name">ОЛЕНА МОВЧАН</span><span class="brand-note">Твій простір для змін</span></span>
+      </button>
+      <nav class="nav" aria-label="Головна навігація"><a class="desktop-link" id="about-link" href="#about">Про квіз</a><button class="nav-button" id="header-start" type="button">Пізнати себе <span aria-hidden="true">↗</span></button></nav>
+    </div>
+  </header>
+  <noscript>Для проходження квізу увімкни JavaScript у браузері. Відповіді обробляються лише на твоєму пристрої.</noscript>
+  <main id="main" class="wrap">
+    <div id="intro-screen">
+      <section class="hero" aria-labelledby="intro-title">
+        <div class="hero-text">
+          <div class="eyebrow">Маленька пауза для себе</div>
+          <h1 id="intro-title" tabindex="-1">Яку роль ти<br>граєш у<br><em>конфлікті?</em></h1>
+          <p class="hero-copy">Рятуєш усіх, береш усе під контроль чи відчуваєш безсилля? Поміть свій звичний сценарій — і знайди точку, з якої починаються зміни.</p>
+          <button class="primary hero-cta" id="start-quiz" type="button">Визначити свою роль <span class="arrow" aria-hidden="true">↗</span></button>
+          <div class="meta"><span><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6" stroke="currentColor"/><path d="M8 4v4l3 1.5" stroke="currentColor"/></svg>3–5 хвилин</span><span>18 запитань</span><span>Без реєстрації</span></div>
+        </div>
+        <div class="hero-visual">
+          <div class="orb" aria-hidden="true"></div>
+          <svg class="triangle-art" viewBox="0 0 470 430" role="img" aria-label="Три ролі трикутника Карпмана: Жертва, Рятівник і Переслідувач. У центрі — ти та твоя можливість вибору.">
+            <path d="M235 103 108 288h254Z" fill="none" stroke="#b9aab5" stroke-width="1.2"/>
+            <path d="m175 171-4 13 13-3m113 43 12 4-2-13m-76 73-10-7v14" fill="none" stroke="#9c8396" stroke-width="1.3"/>
+            <circle cx="235" cy="211" r="32" fill="#fbf9f4" stroke="#d9ccd5"/>
+            <text x="235" y="217" text-anchor="middle" font-family="Georgia,serif" font-size="23" fill="#76516e" font-style="italic">ти</text>
+            <g transform="translate(166 51)"><rect width="138" height="84" rx="16" fill="#dce4d4"/><text x="69" y="34" text-anchor="middle" font-size="24" fill="#627453">✳</text><text x="69" y="60" text-anchor="middle" font-family="Georgia,serif" font-size="21" fill="#495e40">Рятівник</text></g>
+            <g transform="translate(28 251)"><rect width="149" height="85" rx="16" fill="#f2d7c6"/><circle cx="74.5" cy="27" r="10" fill="none" stroke="#a57462" stroke-width="1.4"/><text x="74.5" y="61" text-anchor="middle" font-family="Georgia,serif" font-size="21" fill="#8c5e50">Жертва</text></g>
+            <g transform="translate(285 251)"><rect width="160" height="85" rx="16" fill="#e3d6e7"/><path d="m80 16 11 11-11 11-11-11Z" fill="none" stroke="#92709b" stroke-width="1.4"/><text x="80" y="61" text-anchor="middle" font-family="Georgia,serif" font-size="19" fill="#775582">Переслідувач</text></g>
+            <circle cx="112" cy="157" r="3" fill="#c1adba"/><circle cx="360" cy="153" r="2.5" fill="#b9c2ae"/><path d="M332 82h12m-6-6v12M88 360h9m-4.5-4.5v9" stroke="#c0a8b9"/>
+          </svg>
+          <p class="visual-note">Ролі можуть змінюватися. Ти — більше, ніж будь-яка з них.</p>
+        </div>
+      </section>
+      <div class="concept-line"><span aria-hidden="true">✧</span> Не оцінювати себе. Почати себе розуміти. <span aria-hidden="true">✧</span></div>
+      <section class="roles-section" aria-labelledby="roles-title">
+        <div class="section-header"><h2 id="roles-title">Знайомі сценарії. Новий погляд.</h2><p>Три ролі, у які можна потрапити під час напруженої взаємодії.</p></div>
+        <div class="role-grid">
+          <article class="role-card"><div class="role-top"><span class="role-number">01 / БЕЗСИЛЛЯ</span><span class="symbol peach" aria-hidden="true">○</span></div><h3>Жертва</h3><p class="role-phrase">«Від мене нічого не залежить»</p><p class="role-desc">Складно побачити свій вплив. Хочеться, щоб хтось зрозумів, підтримав і все владнав.</p></article>
+          <article class="role-card"><div class="role-top"><span class="role-number">02 / ПОРЯТУНОК</span><span class="symbol sage" aria-hidden="true">✳</span></div><h3>Рятівник</h3><p class="role-phrase">«Без мене вони не впораються»</p><p class="role-desc">Чужі потреби стають важливішими за власні. Допомога поступово перетворюється на виснаження.</p></article>
+          <article class="role-card"><div class="role-top"><span class="role-number">03 / КОНТРОЛЬ</span><span class="symbol lavender" aria-hidden="true">◇</span></div><h3>Переслідувач</h3><p class="role-phrase">«Має бути так, як я кажу»</p><p class="role-desc">Напруження переходить у критику, звинувачення й тиск. Цю роль також називають Агресором.</p></article>
+        </div>
+        <p class="gentle-note"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6.5" stroke="currentColor"/><path d="M8 7v4M8 4v1" stroke="currentColor"/></svg><span>Це ролі в конкретній взаємодії, а не типи особистості. Одна людина може впізнавати себе в різних ролях.</span></p>
+      </section>
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div><h2 id="about-title">Трохи про цей квіз</h2><p class="sub">Щоб ти знала, що стоїть за результатом.</p></div>
+        <div class="about-content">
+          <details><summary>Як відповідати на запитання?</summary><p>Обери один контекст: наприклад, стосунки в парі, родину або роботу. Пригадай останні 2–4 тижні й відповідай, як найчастіше відбувається насправді. Якщо ситуацій майже не було, пригадай останні схожі випадки. Тут немає правильних чи неправильних відповідей. Будь-яке запитання можна переглянути й змінити відповідь.</p></details>
+          <details><summary>На чому ґрунтується квіз?</summary><p>Ідея трьох ролей походить із моделі драматичного трикутника Стівена Карпмана (1968): Жертва, Рятівник і Переслідувач. Агресор — поширена інша назва ролі Переслідувача, а не окрема четверта роль.</p><p>Запитання та правила підрахунку створено для цього освітнього квізу. Це не оригінальний тест Карпмана, не валідована психодіагностична методика і не спосіб установити діагноз.</p><a class="source-link" href="https://karpmandramatriangle.com/dt_article_only.html" target="_blank" rel="noopener noreferrer">Першоджерело моделі: Karpman, 1968 ↗</a></details>
+          <details><summary>Як рахується результат?</summary><p>Кожну роль описують 6 тверджень. Відповіді дають від 0 («майже ніколи») до 4 («майже завжди») балів: усього від 0 до 24 за кожною роллю. Вищий бал означає, що ти частіше впізнаєш описані реакції у вибраному контексті, а не «більше належиш» до певного типу.</p><p>Якщо всі суми не перевищують 6, квіз не виділяє провідної ролі. Якщо найвищі суми відрізняються не більш ніж на 2 бали, показує кілька сценаріїв. Це умовні правила подання відповідей, а не науково встановлені межі.</p></details>
+          <details><summary>Що важливо знати про безпеку та приватність?</summary><p>Відповіді обробляються в пам’яті цієї сторінки: квіз не надсилає їх на сервер, не додає до адреси та не зберігає після перезавантаження. Тут немає форми з іменем, email або телефоном.</p><p>Роль «Жертва» в цій моделі не означає відповідальності за пережите насильство. За насильство відповідає той, хто його чинить. Якщо є погрози, примус або страх за безпеку, цей квіз не підходить для оцінки ситуації: пріоритет — безпека та фахова підтримка.</p></details>
+        </div>
+      </section>
+    </div>
+    <section id="quiz-screen" class="quiz-shell" hidden aria-labelledby="question-title">
+      <div class="quiz-top"><button class="text-button" id="quiz-home" type="button">← На головну</button><span class="question-count" id="question-count"></span></div>
+      <div class="progress-track" id="quiz-progress" role="progressbar" aria-label="Запитання, на які вже є відповідь" aria-valuemin="0" aria-valuemax="18" aria-valuenow="0"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="question-panel"><div class="eyebrow">Помічай себе без оцінок</div><h1 id="question-title" tabindex="-1"></h1><p class="question-help" id="question-help">Пригадай останні 2–4 тижні в одній сфері життя. Як часто це про тебе?</p><fieldset class="answers" id="answers" aria-describedby="question-help"><legend class="sr-only">Обери частоту від «майже ніколи» до «майже завжди»</legend></fieldset></div>
+      <div class="quiz-controls"><button class="text-button" id="previous" type="button">← Попереднє</button><button class="primary" id="next" type="button" disabled><span id="next-label">Далі</span><span class="arrow" aria-hidden="true">→</span></button></div>
+      <p class="quiz-privacy">Можна відповідати клавішами 1–5. Відповіді залишаються лише на цій сторінці.</p>
+    </section>
+    <section id="result-screen" class="result-shell" hidden aria-labelledby="result-title">
+      <button class="text-button" id="edit-answers" type="button">← Переглянути відповіді</button>
+      <div class="result-intro"><div class="eyebrow">Твоя точка для змін</div><h1 id="result-title" tabindex="-1"></h1><span class="result-badge" id="result-badge"></span><p id="result-summary"></p></div>
+      <div class="score-panel"><h2>Три ролі у твоїх відповідях</h2><div id="score-rows"></div><p class="score-caption">Бали від 0 до 24 показують, як часто ти впізнаєш описані реакції. Це не відсотки особистості й не ймовірність діагнозу.</p></div>
+      <div class="result-details" id="result-details"></div>
+      <div class="result-notice"><strong>Ти — більше, ніж будь-яка роль.</strong> Результат стосується лише твоїх відповідей у вибраному контексті. Він не встановлює діагноз і не визначає, хто винен у конфлікті. Людина, яка зазнає насильства, не відповідає за дії кривдника.</div>
+      <section class="next-chapter" aria-labelledby="next-chapter-title"><div class="eyebrow">Метод Олени Мовчан</div><h2 id="next-chapter-title">Побачити себе —<br><em>вже початок змін.</em></h2><p class="chapter-intro">А далі можна піти глибше. Обери формат, який відповідає твоїй готовності зараз.</p><div class="offer-grid"><article class="offer-card program"><span class="offer-tag">Я готова до глибшої роботи</span><h3>90 днів<br>до цілі</h3><p>Велика програма на три місяці — для твого наступного кроку в роботі із собою.</p><div class="offer-bottom"><span>ПРОГРАМА · 3 МІСЯЦІ</span><span aria-hidden="true">↗</span></div></article><article class="offer-card club"><span class="offer-tag">Хочу почати зі знайомства</span><h3>Простір<br>твоїх змін</h3><p>Закритий клуб-спільнота. Перший дотик до методу та знайомство із собою.</p><div class="offer-bottom"><span>ЗАКРИТИЙ КЛУБ · СПІЛЬНОТА</span><span aria-hidden="true">✳</span></div></article></div><p class="offer-note">Твій темп. Твій вибір. Твій простір для змін.</p></section>
+      <div class="result-buttons"><button class="primary" id="restart" type="button">Пройти ще раз <span aria-hidden="true">↗</span></button><button class="secondary" id="print-result" type="button">Зберегти / друкувати</button></div>
+      <details class="result-method"><summary>Про методику й підрахунок</summary><p>Це освітній квіз за мотивами моделі Карпмана, не валідований психометричний тест. Шість авторських тверджень на роль, 0–4 бали за відповідь. Умовні правила подання: максимум до 6 включно — без провідної ролі; різниця до 2 балів включно — кілька близьких сценаріїв. Квіз не є частиною діагностики або підтвердженням ефективності будь-якої програми.</p><a class="source-link" href="https://karpmandramatriangle.com/dt_article_only.html" target="_blank" rel="noopener noreferrer">Модель Стівена Карпмана, 1968 ↗</a></details>
+    </section>
+  </main>
+  <footer class="site-footer footer"><div class="wrap footer-inner"><span>© 2026 Олена Мовчан</span><span>Самопізнання · Стосунки · Діалог</span><span>Освітній квіз для самоспостереження</span></div></footer>
+</body>
+</html>
