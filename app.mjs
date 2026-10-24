@@ -9,8 +9,8 @@ let activeScreen = 'intro';
 function showScreen(screen) {
   activeScreen = screen;
   for (const name of ['intro', 'quiz', 'result']) $(name + '-screen').hidden = name !== screen;
-  $('landing-nav').hidden = screen !== 'intro';
-  $('header-start').textContent = screen === 'intro' ? 'Пройти квіз ↗' : 'До запитань ↗';
+  $('about-link').hidden = screen !== 'intro';
+  $('header-start').textContent = screen === 'intro' ? 'Пізнати себе ↗' : 'До запитань ↗';
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
