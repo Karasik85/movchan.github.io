@@ -34,42 +34,33 @@ export const roles = {
   }
 };
 
-export const scale = ['Майже ніколи', 'Рідко', 'Іноді', 'Часто', 'Майже завжди'];
+export const scale = ['Рідко', 'Іноді', 'Часто'];
 
-// Original educational statements: six per role, interleaved to avoid grouped priming.
+// Original educational statements: three per role, interleaved.
 export const questions = [
-  { role: 'victim', text: 'Під час конфлікту я думаю, що від мене мало що залежить.' },
-  { role: 'rescuer', text: 'Я беруся розв’язувати чужі проблеми ще до того, як мене про це попросять.' },
-  { role: 'persecutor', text: 'Коли щось іде не за планом, я починаю шукати, хто винен.' },
-  { role: 'rescuer', text: 'Я погоджуюся допомогти, навіть якщо через це нехтую власними потребами.' },
-  { role: 'persecutor', text: 'У суперечці я переходжу від конкретної ситуації до оцінок людини: «ти завжди» або «ти ніколи».' },
-  { role: 'victim', text: 'Я чекаю, що інша людина сама зрозуміє мої потреби й виправить ситуацію.' },
-  { role: 'persecutor', text: 'Коли мене не чують, я посилюю тиск: говорю різкіше, наказую або вимагаю.' },
-  { role: 'victim', text: 'Мені важко назвати хоча б один власний крок, який міг би покращити напружену ситуацію.' },
-  { role: 'rescuer', text: 'Я почуваюся винно, якщо відмовляю в допомозі або ставлю свої справи на перше місце.' },
-  { role: 'victim', text: 'Замість прямого прохання про підтримку я сподіваюся, що хтось здогадається й допоможе.' },
-  { role: 'persecutor', text: 'У конфлікті мені важливіше довести, що я маю рацію, ніж зрозуміти іншу людину.' },
-  { role: 'rescuer', text: 'Я відчуваю, що відповідаю за настрій і рішення іншої дорослої людини.' },
-  { role: 'rescuer', text: 'Коли мою допомогу не приймають, мені складно залишити людині право впоратися по-своєму.' },
-  { role: 'victim', text: 'Я думаю, що ситуація зміниться лише тоді, коли інша людина змінить свою поведінку.' },
-  { role: 'persecutor', text: 'Я використовую докори або сарказм, щоб інша людина зробила так, як я вважаю правильним.' },
-  { role: 'victim', text: 'У складній розмові я передаю іншій людині рішення, які міг / могла б ухвалити самостійно.' },
-  { role: 'rescuer', text: 'Я беру на себе чужі обов’язки, а потім ображаюся, що моїх зусиль не цінують.' },
-  { role: 'persecutor', text: 'Мені складно прийняти відмову: я продовжую переконувати або тиснути після чіткого «ні».' }
+  { role: 'victim', text: 'У конфлікті мені здається, що від мене нічого не залежить.' },
+  { role: 'rescuer', text: 'Я розв’язую чужі проблеми, навіть коли мене не просять.' },
+  { role: 'persecutor', text: 'Коли щось іде не так, я починаю шукати винного.' },
+  { role: 'rescuer', text: 'Я допомагаю іншим, навіть коли мені бракує сил на себе.' },
+  { role: 'persecutor', text: 'У суперечці я критикую людину, а не її конкретний вчинок.' },
+  { role: 'victim', text: 'Я чекаю, що хтось сам зрозуміє, яка підтримка мені потрібна.' },
+  { role: 'persecutor', text: 'Щоб мене почули, я починаю тиснути або наказувати.' },
+  { role: 'victim', text: 'Мені складно побачити, що я можу змінити самостійно.' },
+  { role: 'rescuer', text: 'Мені важко відмовити в допомозі без почуття провини.' }
 ];
 
-export const maxScore = 24;
+export const maxScore = 6;
 
 export function scoreAnswers(answers) {
   if (!Array.isArray(answers) || answers.length !== questions.length ||
       !Array.from(answers).every(value => Number.isInteger(value) && value >= 0 && value < scale.length)) {
-    throw new TypeError('Потрібно відповісти на всі 18 запитань значеннями від 0 до 4.');
+    throw new TypeError('Потрібно відповісти на всі 9 запитань значеннями від 0 до 2.');
   }
   const scores = { victim: 0, rescuer: 0, persecutor: 0 };
   questions.forEach((question, index) => { scores[question.role] += answers[index]; });
   const ranked = Object.keys(scores).sort((a, b) => scores[b] - scores[a]);
   const highest = scores[ranked[0]];
-  const leaders = ranked.filter(key => highest - scores[key] <= 2);
-  // This is an explicitly disclosed editorial rule, not a validated clinical cutoff.
-  return { scores, ranked, leaders, kind: highest <= 6 ? 'low' : leaders.length > 1 ? 'mixed' : 'single' };
+  const leaders = ranked.filter(key => highest - scores[key] <= 1);
+  // Disclosed editorial rules for presentation, not validated clinical cutoffs.
+  return { scores, ranked, leaders, kind: highest <= 1 ? 'low' : leaders.length > 1 ? 'mixed' : 'single' };
 }

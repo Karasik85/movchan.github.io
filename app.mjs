@@ -2,14 +2,15 @@ import { roles, scale, questions, maxScore, scoreAnswers } from './quiz-data.mjs
 
 const $ = id => document.getElementById(id);
 const answers = Array(questions.length).fill(null);
+$('quiz-progress').setAttribute('aria-valuemax', String(questions.length));
 let currentQuestion = 0;
 let activeScreen = 'intro';
 
 function showScreen(screen) {
   activeScreen = screen;
   for (const name of ['intro', 'quiz', 'result']) $(name + '-screen').hidden = name !== screen;
-  $('about-link').hidden = screen !== 'intro';
-  $('header-start').textContent = screen === 'intro' ? 'Пізнати себе ↗' : 'До запитань ↗';
+  $('landing-nav').hidden = screen !== 'intro';
+  $('header-start').textContent = screen === 'intro' ? 'Пройти квіз ↗' : 'До запитань ↗';
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
@@ -160,7 +161,7 @@ document.addEventListener('keydown', event => {
   if (activeScreen !== 'quiz' || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
   if (event.target instanceof HTMLElement && (event.target.isContentEditable || event.target.matches('textarea,input:not([type="radio"]),select'))) return;
   const value = Number(event.key) - 1;
-  if (!/^[1-5]$/.test(event.key)) return;
+  if (!/^[1-3]$/.test(event.key)) return;
   event.preventDefault();
   const input = $('answers').querySelector('input[value="' + value + '"]');
   input.checked = true;
